@@ -1,0 +1,120 @@
+.header {
+    background-color: #343a40;
+    color: #333;
+    padding: 18px;
+    margin: -10px;
+    margin-bottom:10px;
+    text-align: center;
+ }
+   
+.header>p {
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    font-size: 28px;
+    font-family: arial;
+ }
+
+ body{
+     background-color: #fff;
+ }
+ .container-box {
+    padding: 2rem 1rem;
+    background-image: url("../assets/bg-purple-section.png");
+    background-size: contain;
+    /* background-color: #7f168da6; */
+    border-radius: 0.1rem;
+    margin-right: 18px;
+    margin-left: 18px;
+    margin-bottom: 24px
+}
+
+.container-box#card{
+    display: inline;
+}
+
+.font{
+    text-align: center;
+    font-family: arial;
+}
+
+.card{
+    box-shadow: 0 4px 8px 0 rgba(56, 49, 49, 0.219);
+    background-color: #ffffff;
+    max-width: 300px;
+    max-height: 300px;
+    margin: auto;
+    font-family: arial;
+    padding: 10px;
+}
+
+.card>img{
+    /* width: 60%; */
+    border-radius: calc(0.25rem - 1px);
+    box-shadow: #fff;
+    align-content: center;
+ }
+
+ .card>p{
+    /* width: 60%; */
+    border-radius: calc(0.25rem - 1px);
+    box-shadow: #fff;
+    text-align: left;
+ }
+
+.card:hover{
+    background-color: #c7ffe8fb;
+    transition: 0.5s;
+
+}
+
+ /* .card-img-top:hover {
+    background-color: #dffaeffb;
+    transition: 0.5s;
+    border-style: solid;
+    border-width: 4px;
+    border-color: #78c9a97a
+ } */
+
+.price-red{
+    color: rgb(207, 0, 0)
+}
+
+.pagination {
+    display: flex;
+    flex-wrap: wrap;
+    /* overflow-y: auto;
+    overflow-x: hidden;    */
+}
+
+.pagination>div {
+    box-shadow: 0 4px 8px 0 rgba(56, 49, 49, 0.219);
+    background-color: #ffffff;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    font-family: arial;
+    padding: 10px;
+}
+
+.price-linear p,
+.price-linear h3{
+    display: inline;
+}
+
+.footer{
+    background-color: #343a40;
+    color: #333;
+    padding: 18px;
+    margin: -10px;
+    margin-top:30px; 
+    text-align: center;
+}
+
+.footer>p{
+    color: #fff;
+    display: inline-block;
+    margin: 5px;
+    font-size: 16px;
+    font-family: arial;
+ }
