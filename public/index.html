@@ -4,45 +4,50 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Vitrine Linx</title>
+    <title>Linx Impulse Suite</title>
     <script type="text/javascript" src="scripts/script.js"></script>
     <link type="text/css" rel="stylesheet" href="styles/styles.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body class="body">
-
     <header class="header">
-        <p class="header-text ">Nossa loja</p>
-        <nav>
-        </nav>
-    </header>
-
-    <div>
-        <h3 class="font" id="size"></h3>
-    </div>
-
-    <div class="container-box">   
-
-        <h2 class="font">Você visitou: </h2>
-
-        <div class="card" onClick="clickItem(this.id)" id="ref-card">
-            <a href='#' id="url"></a>
-            <img class="card-img-top" id="ref-image">
-            <p id="reference"></p>
-            <div class="price-red price-linear">
-                <p><strong>Por: </strong><h3 id="price-ref"></h3></p>
-            </div>
-            <p class="price-red" id="price-ref-parc"></p>
+        <p>Recomendações</p>
+        <div id="myLinks">
+            <a href="#" id="site-link">Site da loja</a>
+            <a href="https://www.linx.com.br/">Site do Linx</a>
         </div>
-
-            <h2 class="font">Talvez se interesse por: </h2>
-            <div class="pagination" id="list">
-
-        </div> 
+        <a href="javascript:void(0);" class="icon" onclick="menuFunction()">
+            <i class="fa fa-bars"></i>
+        </a>
+    </header>
+    <div class="blink-text">
+        <h2 class="font" id="size"></h2>
     </div>
-
+    <div class="products-box">   
+        <div class="position-ref" id="ref">
+            <h2 class="font-labels" >Você visitou:</h2>
+            <div class="ref-box">
+                <a href='#' id="url" class="a" >
+                    <div class="card">
+                        <img id="ref-image">  
+                        <p id="reference"></p>
+                        <div class="price-red price-linear">
+                            <p><strong>Por: </strong><h3 id="price-ref"></h3></p>
+                        </div>
+                        <p class="price-red" id="price-ref-parc"></p> 
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="position-rec">
+            <h2 class="font-labels">Talvez se interesse :</h2>
+            <a class="back">&#10094;</a>
+            <div class="pagination" id="list"></div>
+            <a class="next">&#10095;</a>
+        </div>
+    </div>
     <footer class="footer">
         <p>2019 by Diogo Tavares</p>
     </footer>
 </body>
 </html>
-

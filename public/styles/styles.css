@@ -1,120 +1,245 @@
 .header {
-    background-color: #343a40;
-    color: #333;
-    padding: 18px;
-    margin: -10px;
-    margin-bottom:10px;
-    text-align: center;
- }
+    background-color: #343a40f1;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9; 
+}
    
 .header>p {
-    color: #fff;
-    display: inline-block;
-    margin: 5px;
+    color: #ffffff;
+    margin-left: 30px;
     font-size: 28px;
-    font-family: arial;
+    font-weight: 600;
+    display: inline-block;
  }
+
+.header #myLinks {
+    display: none;
+}
+ 
+.header>div>a{
+    font-size: 18px;
+    padding: 14px;
+}
+.header a {
+    color: white;
+    padding: 28px 38px;
+    text-decoration: none;
+    font-size: 28px;
+    display: block;
+}
+
+.header a.icon {
+    display: block;
+    position: absolute;
+    right:0;
+    top: 0;
+}
+
+.header a:hover {
+    background-color: #ddddddd0;
+    color: black;
+    transition: 0.6s;
+}
 
  body{
-     background-color: #fff;
+    margin: 0;
+    border: 0;
+    padding-top: 90px;
+    background-color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
  }
- .container-box {
-    padding: 2rem 1rem;
-    background-image: url("../assets/bg-purple-section.png");
-    background-size: contain;
-    /* background-color: #7f168da6; */
-    border-radius: 0.1rem;
-    margin-right: 18px;
-    margin-left: 18px;
-    margin-bottom: 24px
+
+.blink-text>h2{
+    padding: 8px;
+    color: #c20707;
+    animation: blink 1s linear infinite;
 }
 
-.container-box#card{
-    display: inline;
+@keyframes blink{
+    0%{opacity: 1;}
+    50%{opacity: .9;}
+    100%{opacity: .6;}
 }
+
+ /* ---------  fonts and labels ----------- */
 
 .font{
-    text-align: center;
-    font-family: arial;
+     text-align: center;
 }
 
-.card{
-    box-shadow: 0 4px 8px 0 rgba(56, 49, 49, 0.219);
-    background-color: #ffffff;
-    max-width: 300px;
-    max-height: 300px;
-    margin: auto;
-    font-family: arial;
+.font-labels{
+    color:#ffffff;
+}
+
+.label-stripe-ref{
     padding: 10px;
+    background-color: #4193ff;
 }
-
-.card>img{
-    /* width: 60%; */
-    border-radius: calc(0.25rem - 1px);
-    box-shadow: #fff;
-    align-content: center;
- }
-
- .card>p{
-    /* width: 60%; */
-    border-radius: calc(0.25rem - 1px);
-    box-shadow: #fff;
-    text-align: left;
- }
-
-.card:hover{
-    background-color: #c7ffe8fb;
-    transition: 0.5s;
-
-}
-
- /* .card-img-top:hover {
-    background-color: #dffaeffb;
-    transition: 0.5s;
-    border-style: solid;
-    border-width: 4px;
-    border-color: #78c9a97a
- } */
 
 .price-red{
     color: rgb(207, 0, 0)
 }
+.label-stripe-rec{
+    padding: 10px;
+    background-color: #4193ff
+}
 
-.pagination {
-    display: flex;
-    flex-wrap: wrap;
-    /* overflow-y: auto;
-    overflow-x: hidden;    */
+/* ---------  cards ----------- */
+.card{
+    box-shadow: 0 4px 8px 0 rgba(56, 49, 49, 0.219);
+    background-color: #ffffff;
+    max-width: 200px;
+    max-height: 300px;
+    border-color: #ffffffc7;
+    border-width: 1px;
+    border-style: solid; 
+    padding: 10px;
+}
+.card>img{
+    border-radius: calc(0.25rem - 1px);
+    box-shadow: #fff;
+    align-content: center;
+ }
+ .card>p{
+    border-radius: calc(0.25rem - 1px);
+    box-shadow: #fff;
+ }
+.card:hover{
+    background-color: #c8fce6fb;
+    transition: 0.55s;
+    overflow-y: hidden; 
+    border-color: #879b8e7e;
+    border-width: 1px;
+    border-style: inset; 
+}
+.card:hover>img {
+    padding: 1px;
+    transition: 0.1s;
+    box-shadow: 0px 0px 36px 20px #69d3a781;
+ }
+.price-linear p,
+.price-linear h3{
+     display: inline;
+ }
+.a{
+    text-decoration: none;
+    color: #000;
+}
+
+/* ---------  box purple ----------- */
+.products-box {
+    padding: 6px 20px 20px 20px;
+    background-image: url("../assets/bg-purple-section.png");
+    background-size: cover;
+    border-radius: 4px;
+    margin-right: 18px;
+    margin-left: 18px;
+    margin-bottom: 24px;
+    position: relative;
+    text-align: center;
+ }
+
+/* ---------  reference box ----------- */
+.position-ref{
+    float: left; 
+    position: relative;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.ref-box{
+    background-color: #fae49c;
+    width: 220px;
+    padding: 10px;
+    margin-left: 10px;
+}
+
+/* ---------  recommended box ----------- */
+.position-rec{
+    display: inline-block;    
+    max-width: auto;
+    max-height: auto;
+    position: relative;
+    max-width: 720px;
+
+    overflow: hidden;
+}
+
+.pagination{
+    background-color: #c4c2c2;
+    width: 1000%;
+    float: left;
 }
 
 .pagination>div {
-    box-shadow: 0 4px 8px 0 rgba(56, 49, 49, 0.219);
-    background-color: #ffffff;
-    max-width: 300px;
-    margin: auto;
+    background-color: #e7ffe2;
+    max-width: 220px;
     text-align: center;
-    font-family: arial;
     padding: 10px;
+    width: auto;
+    height: auto;
+    float: left;
 }
 
-.price-linear p,
-.price-linear h3{
-    display: inline;
+.back{
+    left: 0;
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 24px 10px 24px 8px;
+    margin-top: -22px;
+    color: rgba(34, 65, 36, 0.521);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 0 5px 5px 0;
 }
+
+.next{
+    right: 0px;
+    cursor: pointer;
+    position: absolute;
+    top: 55%;
+    width: auto;
+    padding: 24px 8px 24px 10px;
+    margin-top: -22px;
+    color:  rgba(34, 65, 36, 0.521);
+    font-weight: bold;
+    font-size: 30px;
+    transition: 0.6s ease;
+    user-select: none;
+    border-radius: 5px 0 0 5px;
+}
+
+.back:hover, .next:hover {
+    background-color: #3d3d3d73;
+    color: rgb(243, 237, 237);
+}
+
+.clear{
+    clear: both;
+}
+
+/* ---------  footer ----------- */
 
 .footer{
-    background-color: #343a40;
-    color: #333;
-    padding: 18px;
-    margin: -10px;
-    margin-top:30px; 
+    background-color: #343a40f1;
+    padding: 30px;
     text-align: center;
+    position: absolute;
+    right: 0;
+    left: 0;
 }
 
 .footer>p{
     color: #fff;
-    display: inline-block;
     margin: 5px;
     font-size: 16px;
     font-family: arial;
- }
+}
+
