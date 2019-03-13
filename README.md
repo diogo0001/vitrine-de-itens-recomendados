@@ -14,7 +14,7 @@ Implementação compatível com formato mobile e tamanho dinâmico do carousel, 
 
 Carregamento da lista feito dinamicamente em Javascript com os dados JSON, (carregamento feito em JSONP, carregando dinâmicamente a url no escopo do arquivo HTML).
 
-A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). 
+A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). É possivel que o navegador apresente algum warning sobre os scripts da página, basta ir no canto direito da barra de navegação e permitir que a página seja aberta.
 
 ## Tecnologias e Dependências
 
