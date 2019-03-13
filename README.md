@@ -12,7 +12,7 @@ Possui uma implementação de paginação utilizando carousel para os itens reco
 
 Implementação compatível com formato mobile e tamanho dinâmico do carousel, de acordo com o tamanho de tela.
 
-Carregamento da lista feito dinamicamente em Javascript com os dados JSON, (carregamento feito em JSONP, url carregada dinâmicamente no escopo do arquivo HTML).
+Carregamento da lista feito dinamicamente em Javascript com os dados JSON de um [serviçoWeb](http://roberval.chaordicsystems.com/challenge/challenge.json?callback=X), (carregamento feito em JSONP, url carregada dinâmicamente no escopo do arquivo HTML).
 
 A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). É possivel que o navegador apresente algum warning sobre os scripts da página, basta ir no canto direito da barra de navegação e permitir que a página seja aberta (No Google é no canto direito da borda e no Firefox no canto esquerdo, pedir para ver as informações do site). 
 
