@@ -12,20 +12,27 @@ Possui uma implementação de paginação utilizando carousel para os itens reco
 
 Implementação compatível com formato mobile e tamanho dinâmico do carousel, de acordo com o tamanho de tela.
 
-Carregamento da lista feito dinamicamente em Javascript com os dados JSON, (carregamento feito em JSONP, carregando dinâmicamente a url no escopo do arquivo HTML).
+Carregamento da lista feito dinamicamente em Javascript com os dados JSON, (carregamento feito em JSONP, url carregada dinâmicamente no escopo do arquivo HTML).
 
-A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). 
+A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). É possivel que o navegador apresente algum warning sobre os scripts da página, basta ir no canto direito da barra de navegação e permitir que a página seja aberta (Local onde aparecer alguma exclamação vermelha). 
+
+O deploy foi feito com Heroku, uma plataforma que, além de gratuita, facilita implementação pois utiliza o git e seus comandos. 
+
 
 ## Tecnologias e Dependências
 
 Desenvolvido sem Frameworks ou bibliotecas para Frontend, (apenas uma classe via CDN para implementar o menu) 
 
+
 ### Frotend
+
 - Javascript - Elementos dinâmicos da tela e manipulação dos dados
 - HTML - Estrutura da página
 - CSS - Estilos e posicionamento
 
+
 ### Backend
+
 - [Node.js](https://nodejs.org/en/) - v10.9.0
 - [Express](https://expressjs.com/pt-br/) - v6.2.0
 - [Npm](https://www.npmjs.com/) - v6.2.0
