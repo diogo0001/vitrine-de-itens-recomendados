@@ -6,10 +6,6 @@ var listItems = [];
 
 // ----------------------- Obtém os dados e cria os elementos --------------------------------- 
 const X = (jsonData) =>{
-            
-        // console.log('size: '+jsonData.data.widget.size);
-        // console.log('reference name: '+jsonData.data.reference.item.name);
-        // console.log('recommendation[1]: '+jsonData.data.recommendation[1].name);
 
         var size = jsonData.data.widget.size;
         var ref = jsonData.data.reference.item;
@@ -24,10 +20,7 @@ const X = (jsonData) =>{
         document.getElementById("price-ref-parc").innerHTML = removeDot(ref.productInfo.paymentConditions)+"<br>sem juros";
         document.getElementById("site-link").href = getSiteLink(ref.detailUrl);
 
-
-        // var div = document.getElementById("list");
         var div = document.querySelector(".pagination");
-
 
         for (x in recommend){
             var listItem = document.createElement("div");
@@ -63,7 +56,7 @@ const X = (jsonData) =>{
 
 // ------------------------- Funções de formatação e validação -------------------------
 
-// limita o tamanho da string para haver um padrão
+// Limita o tamanho da string para haver um padrão
 const limitString = (string) =>{
     var shorString = string;
     var length = 65;
@@ -74,7 +67,7 @@ const limitString = (string) =>{
     return shorString;
 }
 
-// verifica se o valor existe
+// Verifica se o valor existe
 const validatePrice = (price) =>{
     var checkPrice = price;
     
@@ -84,18 +77,18 @@ const validatePrice = (price) =>{
     return checkPrice;
 }
 
-// substitui o ponto do valor por virgula
+// Substitui o ponto do valor por virgula
 const removeDot = (string) =>{
     return string.replace(/\./g,',');
 }
 
-// retorna a url principal
+// Retorna a url principal
 const getSiteLink = (detailUrl) =>{
     var domain = detailUrl.split(".");
     return "http://www."+domain[1]+"."+domain[2]+".br";
 }
 
-// itens do menu
+// Itens do menu
 const menuFunction = () => {
     var x = document.getElementById("myLinks");
     if (x.style.display === "block") {
@@ -116,37 +109,25 @@ const carouselNav = (size) =>{
     width = width.clientWidth;
     var currentItems = setBoxSize();   
     var ident = 0;
-    var count = (size/currentItems) -1;
-
+    var count = (size/currentItems) -1; // para a primeira vez
     var slide = 0;
 
     document.querySelector('.next').addEventListener("click",()=>{
-        // currentItems = setBoxSize(); 
-        // count = (size/currentItems) -1;
-        console.log("\nnext - slide:" +slide);
-        console.log("currentItems:" +currentItems);
-        console.log("count:" +count);
-
-        if(ident<count){
+        currentItems = setBoxSize(); 
+        count = (size/currentItems) -1;
+        if(ident<count){  
             ident++;
             slide -= width*currentItems;
             document.getElementById("list").style.marginLeft = slide+'px';
-            // document.querySelector('.pagination').animate({'margin-left':+slide+'px'},'500');
-            console.log("ident:" +ident);
         }
     })
-    document.querySelector('.back').addEventListener("click",()=>{
-        // currentItems = setBoxSize(); 
-        // count = (width/size) -1;
-        console.log("\nback - slide: "+slide);
-        console.log("currentItems:" +currentItems);
-        console.log("count:" +count);
 
+    document.querySelector('.back').addEventListener("click",()=>{
+        currentItems = setBoxSize(); 
         if(ident>=1){
             ident--;
             slide += width*currentItems;
             document.getElementById("list").style.marginLeft = slide+'px';
-            // document.querySelector('.pagination').animate({'margin-left':+slide+'px'},'500');
         }
     })
 }
@@ -162,7 +143,7 @@ const setBoxSize = () =>{
     boxSize = boxSize - width - 80 -36; // subtrai as margens
     var applyBoxSize = boxSize; 
 
-    // para modificar o tamanho da box
+    // Para modificar o tamanho da box
     if(boxSize<width*3 && boxSize>=width*2){
         currentItems = 2;
         applyBoxSize = width*currentItems;
@@ -183,14 +164,10 @@ const setBoxSize = () =>{
     if(currentItems==1){
         document.getElementById("ref").style.marginLeft = 36+'px';
     } else {
-        document.getElementById("ref").style.marginLeft = 10+'px';
+        document.getElementById("ref").style.marginLeft = 8+'px';
     }
 
     document.querySelector('.position-rec').style.maxWidth = applyBoxSize+'px';  
-
-    console.log("box size: "+boxSize);
-    console.log("currentItems: "+currentItems);
-    console.log("applyBoxSize: "+applyBoxSize);
 
     return currentItems;
 }
