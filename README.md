@@ -14,7 +14,7 @@ Implementação compatível com formato mobile e tamanho dinâmico do carousel, 
 
 Carregamento da lista feito dinamicamente em Javascript com os dados JSON, (carregamento feito em JSONP, carregando dinâmicamente a url no escopo do arquivo HTML).
 
-A página foi carregada em um servidor remoto e está didponível neste link. 
+A página foi carregada em um servidor remoto e está didponível neste [link](https://vitrine-de-produtos.herokuapp.com). 
 
 ## Tecnologias e Dependências
 
@@ -26,4 +26,7 @@ Desenvolvido sem Frameworks ou bibliotecas para Frontend, (apenas uma classe via
 - CSS - Estilos e posicionamento
 
 ### Backend
-- Node.js - Código para o servidor em Javascript
+- [Node.js](https://nodejs.org/en/) - v10.9.0
+- [Express](https://expressjs.com/pt-br/) - v6.2.0
+- [Npm](https://www.npmjs.com/) - v6.2.0
+- [Heroku](https://dashboard.heroku.com/) -7.22.4
