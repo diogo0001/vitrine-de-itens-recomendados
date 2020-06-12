@@ -1,4 +1,4 @@
-# Vitrine de itens recomendados
+# Vitrine de itens recomendados (API indisponível)
 
 Página web que apresenta os itens recomendados a partir de um item de referência, consumindo dados JSON.
 
